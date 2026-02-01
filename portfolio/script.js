@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Send email using EmailJS
-            emailjs.send('service_3n7vjc7', 'template_3wviv8j', templateParams)
+            emailjs.send('service_ixcx99i', 'template_o5lnozl', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     
@@ -414,6 +414,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showDetailView(serviceType) {
         console.log('showDetailView called for:', serviceType);
+        
         const html = generateDetailHTML(serviceType);
         detailContent.innerHTML = html;
         
@@ -421,13 +422,20 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('detailView element:', detailView);
         
         if (serviceCardsView) {
-            // Use a class to hide the service cards instead of inline style
+            // Add hidden class for fade out animation
             serviceCardsView.classList.add('hidden');
             console.log('Added hidden class to serviceCardsView');
+            
+            // After transition completes, fully hide it
+            setTimeout(() => {
+                serviceCardsView.classList.add('fade-out-complete');
+            }, 400);
         }
         
         if (detailView) {
             detailView.style.display = 'block';
+            // Trigger reflow to ensure transition works
+            detailView.offsetHeight;
             detailView.classList.add('active');
             console.log('Set detailView display to block and added active class');
         }
@@ -446,14 +454,24 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Back button clicked');
             
             if (detailView) {
-                detailView.style.display = 'none';
+                // Fade out detail view
                 detailView.classList.remove('active');
-                console.log('Set detailView display to none and removed active class');
+                console.log('Removed active class from detailView');
+                
+                // After transition, hide it
+                setTimeout(() => {
+                    detailView.style.display = 'none';
+                }, 500);
             }
             
             if (serviceCardsView) {
-                serviceCardsView.classList.remove('hidden');
-                console.log('Removed hidden class from serviceCardsView');
+                // Remove both hidden classes
+                serviceCardsView.classList.remove('fade-out-complete');
+                // Small delay before removing hidden to ensure proper display
+                setTimeout(() => {
+                    serviceCardsView.classList.remove('hidden');
+                    console.log('Removed hidden class from serviceCardsView');
+                }, 50);
             }
             
             // Scroll to top of section
