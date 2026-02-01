@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Prince Aaron - Virtual Assistant Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='25' fill='%234A443F'/%3E%3Ctext x='64' y='92' font-family='sans-serif' font-weight='bold' font-size='90' text-anchor='middle' fill='%23FAEBD7'%3EP%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Initialize EmailJS with your public key
+            // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+            emailjs.init('3zdYEcOXVi8oFiI4U');
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">PrinceAaron</a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="navbar" id="navbar">
+            <div class="navbar-buttons">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>  
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <section id="home" class="first-section">
+        <div class="grain-overlay"></div>
+        <div class="first-page">
+            <div class="welcomePage">
+                <div class="title-wrapper">
+                    <h1 class="main-title">Prince Aaron</h1>
+                    <div class="accent-line"></div>
+                </div>
+                <h2 class="subtitle">Virtual Assistant Portfolio</h2>
+                <p class="tagline">Streamlining operations, amplifying success</p>
+            </div>
+            <div class="profile-picture">
+                <div class="image-frame">
+                    <img src="firstpic.jpg" alt="Prince Aaron - Virtual Assistant"  />
+                </div>
+            </div>
+        </div>
+        <aside class="intro-sidebar">
+            <div class="self-description">
+                <h3>Welcome to My Portfolio!</h3>
+                <p>Hello! I'm Prince Aaron, a dedicated virtual assistant with a passion for helping businesses and entrepreneurs streamline their operations. With a strong background in administrative support, customer service, and project management, I am committed to providing top-notch assistance to help you achieve your goals.</p>
+                <p>Explore my portfolio to learn more about my skills, experience, and how I can contribute to your success. Let's work together to make your business thrive!</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/prince-aaron-capuz-924827377/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/princeaaroncapuz" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/prince.friez/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@princeeyron?lang=en" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <section id="about" class="second-section">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-me">
+            <div class="info-one">
+                <div class="hobby-card">
+                    <h4><i class="fas fa-heart"></i> My Hobbies</h4>
+                    <ul>
+                        <li><span class="bullet">→</span> Watching movies</li>
+                        <li><span class="bullet">→</span> Online browsing</li>
+                        <li><span class="bullet">→</span> Viewing short-form content</li>
+                        <li><span class="bullet">→</span> Playing online games</li>
+                        <li><span class="bullet">→</span> Watching digital design tutorials</li>
+                    </ul>
+                </div>
+                <div class="hobby-card">
+                    <h4><i class="fas fa-star"></i> I Also Enjoy</h4>
+                    <ul>
+                        <li><span class="bullet">→</span> Cooking</li>
+                        <li><span class="bullet">→</span> Playing basketball</li>
+                        <li><span class="bullet">→</span> Creating art (portraiture, landscape)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-two">
+                <div class="trait-block">
+                    <div class="icon-wrapper"><i class="fas fa-rocket"></i></div>
+                    <p>I am hardworking and possess a relentless curiosity that drives me to be a lifelong learner.</p>
+                </div>
+                <div class="trait-block">
+                    <div class="icon-wrapper"><i class="fas fa-code"></i></div>
+                    <p>My background in Computer Science allows me to be highly tech-savvy. I efficiently navigate tools, perform L1 IT support tasks such as basic troubleshooting, develop websites and mobile applications, and analyze data effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="third-section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Skills & Expertise</h2>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Administrative Support</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-calendar-check"></i></div>
+                        <span>Calendar Management</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-envelope"></i></div>
+                        <span>Email Management</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
+                        <span>Document Preparation</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+                        <span>Task Coordination</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-headset"></i>
+                    <h3>Customer Service</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                        <span>Client Communication</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-smile"></i></div>
+                        <span>Customer Satisfaction</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-clock"></i></div>
+                        <span>Timely Response</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-handshake"></i></div>
+                        <span>Problem Resolution</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Project Management</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                        <span>Planning & Strategy</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-users"></i></div>
+                        <span>Team Coordination</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <span>Progress Tracking</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-bullseye"></i></div>
+                        <span>Goal Achievement</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Technical Skills</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+                        <span>MS Office Suite</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-google"></i></div>
+                        <span>Google Workspace</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <span>Basic Web Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="fourth-section">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Professional Experience</h2>
+        </div>
+
+        <!-- Service Cards View -->
+        <div class="service-cards-grid" id="serviceCardsView">
+            <div class="service-card" data-service="admin">
+                <div class="card-number">01</div>
+                <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Administrative Support</h3>
+                <p>Comprehensive administrative assistance including calendar management, email handling, document preparation, and seamless task coordination to keep your business running smoothly.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Calendar & email management</li>
+                    <li><i class="fas fa-check"></i> Document preparation</li>
+                    <li><i class="fas fa-check"></i> Task organization</li>
+                </ul>
+                <button class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="service-card" data-service="customer">
+                <div class="card-number">02</div>
+                <div class="card-icon"><i class="fas fa-phone-volume"></i></div>
+                <h3>Customer Support</h3>
+                <p>Professional customer service with proven experience in healthcare and financial sectors, ensuring exceptional client satisfaction and efficient problem resolution.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Multi-channel support</li>
+                    <li><i class="fas fa-check"></i> Issue resolution</li>
+                    <li><i class="fas fa-check"></i> Client relationship management</li>
+                </ul>
+                <button class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="service-card" data-service="project">
+                <div class="card-number">03</div>
+                <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                <h3>Project Coordination</h3>
+                <p>Strategic project management support to ensure your initiatives stay on track, meet deadlines, and achieve their objectives with precision and efficiency.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Timeline management</li>
+                    <li><i class="fas fa-check"></i> Resource coordination</li>
+                    <li><i class="fas fa-check"></i> Progress reporting</li>
+                </ul>
+                <button class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="service-card" data-service="tech">
+                <div class="card-number">04</div>
+                <div class="card-icon"><i class="fas fa-laptop"></i></div>
+                <h3>Tech Support & Development</h3>
+                <p>Leveraging my Computer Science background to provide technical support, troubleshooting, web development, and data analysis tailored to your business needs.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Basic IT troubleshooting</li>
+                    <li><i class="fas fa-check"></i> Web/app development</li>
+                    <li><i class="fas fa-check"></i> Data insights</li>
+                </ul>
+                <button class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Detailed View -->
+        <div class="experience-detail-view" id="detailView" style="display: none;">
+            <button class="back-btn" id="backBtn"><i class="fas fa-arrow-left"></i> Back to Services</button>
+            
+            <div class="detail-content" id="detailContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- My Works Section -->
+        <div class="my-works-section">
+            <h3 class="works-title"><i class="fas fa-briefcase"></i> My Works</h3>
+            <div class="works-container">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="POSTER.png" alt="Real Estate Poster" />
+                    </div>
+                    <div class="work-description">
+                        <h4>Real Estate Promotional Poster</h4>
+                        <p>Created a poster to promote real estate houses, highlighting the strategic location to gather attention and engage viewers effectively.</p>
+                        <div class="work-tags">
+                            <span class="tag"><i class="fas fa-palette"></i> Graphic Design</span>
+                            <span class="tag"><i class="fas fa-home"></i> Real Estate</span>
+                            <span class="tag"><i class="fas fa-bullhorn"></i> Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fifth-section">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Let's Connect</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Ready to collaborate?</h3>
+                <p>I'm always excited to work with new clients and help businesses achieve their goals. Whether you need ongoing support or assistance with a specific project, let's discuss how I can help.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:princeaaronva@gmail.com">princeaaronva@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fa-brands fa-viber"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="viber://chat?number=639603839165">Message me on Viber</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Las Piñas City, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-connect">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons-contact">
+                        <a href="https://www.linkedin.com/in/prince-aaron-capuz-924827377/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/princeaaroncapuz" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/prince.friez/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@princeeyron?lang=en" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="from_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="reply_to" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Prince Aaron. All rights reserved.</p>
+            <p class="footer-tagline">Built with dedication and attention to detail</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
