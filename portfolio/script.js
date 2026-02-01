@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.2,
-        rootMargin: '-50px 0px -50px 0px'
+        threshold: 0.1, // Reduced from 0.2 for better mobile detection
+        rootMargin: '0px 0px -100px 0px' // Adjusted margin
     });
 
     animatedSections.forEach((section) => observer.observe(section));
@@ -167,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Send email using EmailJS
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS IDs
             emailjs.send('service_3n7vjc7', 'template_3wviv8j', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
@@ -269,91 +268,82 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Processed dispute transactions and card requests',
                         'Managed document requests and inquiries',
                         'Guided customers through website and app navigation',
-                        'Provided comprehensive support for account-related concerns'
+                        'Documented all interactions with precision and detail'
                     ]
                 }
-            ],
-            tools: [
-                { icon: 'fa-headset', name: 'Zendesk', description: 'Customer support ticketing' },
-                { icon: 'fa-phone', name: 'VoIP Systems', description: 'Call management' },
-                { icon: 'fa-envelope', name: 'Email Tools', description: 'Multi-channel support' }
             ]
         },
-        admin: {
-            title: 'Administrative Support',
-            icon: 'fa-briefcase',
-            experiences: [
-                {
-                    position: 'Administrative Assistant',
-                    company: 'Various Projects',
-                    period: '2020 - Present',
-                    role: 'Virtual Assistant',
-                    responsibilities: [
-                        'Calendar management and appointment scheduling',
-                        'Email correspondence and inbox organization',
-                        'Document preparation and data entry',
-                        'Meeting coordination and minutes preparation',
-                        'Task prioritization and deadline management'
-                    ]
-                }
-            ],
+        administrative: {
+            title: 'Administrative Excellence',
+            icon: 'fa-cogs',
             tools: [
-                { icon: 'fa-microsoft', name: 'MS Office', description: 'Word, Excel, PowerPoint' },
-                { icon: 'fa-google', name: 'Google Workspace', description: 'Docs, Sheets, Calendar' },
-                { icon: 'fa-trello', name: 'Trello', description: 'Task management' },
-                { icon: 'fa-slack', name: 'Slack', description: 'Team communication' }
-            ]
-        },
-        project: {
-            title: 'Project Coordination',
-            icon: 'fa-chart-bar',
-            experiences: [
                 {
-                    position: 'Project Coordinator',
-                    company: 'Freelance Projects',
-                    period: '2021 - Present',
-                    role: 'Project Management Support',
-                    responsibilities: [
-                        'Coordinated project timelines and deliverables',
-                        'Tracked project milestones and progress',
-                        'Facilitated team communication and collaboration',
-                        'Prepared status reports and presentations',
-                        'Managed project documentation and resources'
-                    ]
+                    name: 'Google Drive',
+                    icon: 'fa-google-drive',
+                    description: 'I use Google Drive to store projects and organize files efficiently by creating separate folders for different types of documents.'
+                },
+                {
+                    name: 'Zendesk',
+                    icon: 'fa-ticket-alt',
+                    description: 'I trained myself to use Zendesk to effectively manage support tickets and email communications.'
+                },
+                {
+                    name: 'Microsoft Excel',
+                    icon: 'fa-file-excel',
+                    description: 'I use Excel for efficient data organization, storage, analysis, manipulation, and visualization.'
+                },
+                {
+                    name: 'Microsoft Word & Google Docs',
+                    icon: 'fa-file-word',
+                    description: 'I use Microsoft Word and Google Docs to format and edit documents, which support my academic work and are tools I use regularly.'
                 }
-            ],
-            tools: [
-                { icon: 'fa-tasks', name: 'Asana', description: 'Project tracking' },
-                { icon: 'fa-jira', name: 'Jira', description: 'Agile management' },
-                { icon: 'fa-chart-gantt', name: 'MS Project', description: 'Timeline planning' }
             ]
         },
         tech: {
             title: 'Tech Support & Development',
             icon: 'fa-laptop',
-            experiences: [
-                {
-                    position: 'Technical Support Specialist',
-                    company: 'Various Clients',
-                    period: '2020 - Present',
-                    role: 'IT Support & Web Development',
-                    responsibilities: [
-                        'Basic IT troubleshooting and technical support',
-                        'Website development and maintenance',
-                        'Mobile application development',
-                        'Data analysis and reporting',
-                        'System optimization and performance monitoring'
-                    ]
-                }
-            ],
             tools: [
-                { icon: 'fa-html5', name: 'HTML/CSS/JS', description: 'Web development' },
-                { icon: 'fa-react', name: 'React', description: 'Frontend framework' },
-                { icon: 'fa-database', name: 'SQL', description: 'Database management' },
-                { icon: 'fa-python', name: 'Python', description: 'Data analysis' }
+                {
+                    name: 'Figma',
+                    icon: 'fa-figma',
+                    description: 'I use Figma to design high-fidelity prototypes for mobile and web interfaces, emphasizing usability, visual consistency, and effective user experience design.'
+                },
+                {
+                    name: 'ChatGPT',
+                    icon: 'fa-robot',
+                    description: 'I use ChatGPT to work more efficiently and reduce mistakes, especially for checking grammar and improving paragraph quality.'
+                },
+                {
+                    name: 'Canva',
+                    icon: 'fa-palette',
+                    description: 'I am proficient in Canva, utilizing it to design high-impact presentations, data-driven infographics, and professional marketing collateral that translate complex strategies into clear visuals.'
+                }
+            ]
+        },
+        project: {
+            title: 'Project Coordination',
+            icon: 'fa-chart-bar',
+            tools: [
+                {
+                    name: 'Email Communication',
+                    icon: 'fa-envelope',
+                    description: 'I use gmail as a primary communication tool, especially for formal matters like submitting requirements.'
+                },
+                {
+                    name: 'GitHub',
+                    icon: 'fa-github',
+                    description: 'I use GitHub for version control, project management, and hosting websites for web and mobile application development, enabling better collaboration with teammates.'
+                },
+                {
+                    name: 'Google Drive',
+                    icon: 'fa-google-drive',
+                    description: 'I use Google Drive to store projects and organize files efficiently by creating separate folders for different types of documents.'
+                }
             ]
         }
     };
+
+    
 
     function generateDetailHTML(serviceType) {
         const data = serviceDetails[serviceType];
@@ -410,34 +400,69 @@ document.addEventListener('DOMContentLoaded', function() {
             learnMoreBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const serviceType = card.getAttribute('data-service');
+                console.log('Learn More button clicked for:', serviceType);
                 showDetailView(serviceType);
             });
         }
         
         card.addEventListener('click', () => {
             const serviceType = card.getAttribute('data-service');
+            console.log('Card clicked for:', serviceType);
             showDetailView(serviceType);
         });
     });
 
     function showDetailView(serviceType) {
+        console.log('showDetailView called for:', serviceType);
         const html = generateDetailHTML(serviceType);
         detailContent.innerHTML = html;
         
-        serviceCardsView.style.display = 'none';
-        detailView.style.display = 'block';
+        console.log('serviceCardsView element:', serviceCardsView);
+        console.log('detailView element:', detailView);
+        
+        if (serviceCardsView) {
+            // Use a class to hide the service cards instead of inline style
+            serviceCardsView.classList.add('hidden');
+            console.log('Added hidden class to serviceCardsView');
+        }
+        
+        if (detailView) {
+            detailView.style.display = 'block';
+            detailView.classList.add('active');
+            console.log('Set detailView display to block and added active class');
+        }
         
         // Scroll to top of section
-        document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const experienceSection = document.getElementById('experience');
+        if (experienceSection) {
+            setTimeout(() => {
+                experienceSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
     }
 
     if (backBtn) {
         backBtn.addEventListener('click', () => {
-            detailView.style.display = 'none';
-            serviceCardsView.style.display = 'grid';
+            console.log('Back button clicked');
+            
+            if (detailView) {
+                detailView.style.display = 'none';
+                detailView.classList.remove('active');
+                console.log('Set detailView display to none and removed active class');
+            }
+            
+            if (serviceCardsView) {
+                serviceCardsView.classList.remove('hidden');
+                console.log('Removed hidden class from serviceCardsView');
+            }
             
             // Scroll to top of section
-            document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const experienceSection = document.getElementById('experience');
+            if (experienceSection) {
+                setTimeout(() => {
+                    experienceSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
         });
     }
 
@@ -461,12 +486,16 @@ document.addEventListener('DOMContentLoaded', function() {
     skillItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
             const icon = this.querySelector('.skill-icon');
-            icon.style.transform = 'rotate(360deg) scale(1.1)';
+            if (icon) {
+                icon.style.transform = 'rotate(360deg) scale(1.1)';
+            }
         });
         
         item.addEventListener('mouseleave', function() {
             const icon = this.querySelector('.skill-icon');
-            icon.style.transform = 'rotate(0deg) scale(1)';
+            if (icon) {
+                icon.style.transform = 'rotate(0deg) scale(1)';
+            }
         });
     });
 
@@ -512,4 +541,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('%c👋 Hello! Thanks for checking out the code!', 'font-size: 20px; color: #C9A961; font-weight: bold;');
     console.log('%cBuilt with care by Prince Aaron', 'font-size: 14px; color: #4A443F;');
-}); 
+});

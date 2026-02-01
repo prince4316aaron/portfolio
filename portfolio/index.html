@@ -24,14 +24,7 @@
 <body>
     <header>
         <a href="#home" class="logo">PrinceAaron</a>
-        
-        <!-- Hamburger Menu Button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
+
         <nav class="navbar" id="navbar">
             <div class="navbar-buttons">
                 <a href="#home">Home</a>
@@ -40,7 +33,14 @@
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </div>
-        </nav>  
+        </nav>
+
+        <!-- Hamburger Menu Button (visible on mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- Mobile Menu Overlay -->
@@ -167,33 +167,8 @@
                         <span>Timely Response</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-handshake"></i></div>
-                        <span>Problem Resolution</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Project Management</h3>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
-                        <span>Planning & Strategy</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-users"></i></div>
-                        <span>Team Coordination</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-clipboard-list"></i></div>
-                        <span>Progress Tracking</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-bullseye"></i></div>
-                        <span>Goal Achievement</span>
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <span>CRM Management</span>
                     </div>
                 </div>
             </div>
@@ -205,20 +180,45 @@
                 </div>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
-                        <span>MS Office Suite</span>
+                        <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                        <span>Web Development</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-google"></i></div>
-                        <span>Google Workspace</span>
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <span>Mobile Apps</span>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon"><i class="fas fa-database"></i></div>
                         <span>Data Analysis</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <span>Basic Web Dev</span>
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <span>IT Support (L1)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Project Management</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+                        <span>Project Planning</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-users"></i></div>
+                        <span>Team Coordination</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <span>Progress Tracking</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-bullseye"></i></div>
+                        <span>Goal Achievement</span>
                     </div>
                 </div>
             </div>
@@ -228,20 +228,20 @@
     <section id="experience" class="fourth-section">
         <div class="section-header">
             <span class="section-number">03</span>
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title">Experience &amp; Services</h2>
         </div>
-
+        
         <!-- Service Cards View -->
-        <div class="service-cards-grid" id="serviceCardsView">
-            <div class="service-card" data-service="admin">
+        <div class="experience-container" id="serviceCardsView">
+            <div class="service-card" data-service="administrative">
                 <div class="card-number">01</div>
-                <div class="card-icon"><i class="fas fa-briefcase"></i></div>
-                <h3>Administrative Support</h3>
-                <p>Comprehensive administrative assistance including calendar management, email handling, document preparation, and seamless task coordination to keep your business running smoothly.</p>
+                <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Administrative Excellence</h3>
+                <p>Comprehensive administrative support including calendar management, email handling, document preparation, and task coordination to keep your business running smoothly.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> Calendar & email management</li>
-                    <li><i class="fas fa-check"></i> Document preparation</li>
-                    <li><i class="fas fa-check"></i> Task organization</li>
+                    <li><i class="fas fa-check"></i> Schedule optimization</li>
+                    <li><i class="fas fa-check"></i> Professional correspondence</li>
+                    <li><i class="fas fa-check"></i> Document organization</li>
                 </ul>
                 <button class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></button>
             </div>
@@ -250,7 +250,7 @@
                 <div class="card-number">02</div>
                 <div class="card-icon"><i class="fas fa-phone-volume"></i></div>
                 <h3>Customer Support</h3>
-                <p>Professional customer service with proven experience in healthcare and financial sectors, ensuring exceptional client satisfaction and efficient problem resolution.</p>
+                <p>Dedicated customer service ensuring your clients receive prompt, professional, and friendly assistance. Building relationships that drive customer loyalty and satisfaction.</p>
                 <ul class="service-features">
                     <li><i class="fas fa-check"></i> Multi-channel support</li>
                     <li><i class="fas fa-check"></i> Issue resolution</li>
@@ -275,7 +275,7 @@
             <div class="service-card" data-service="tech">
                 <div class="card-number">04</div>
                 <div class="card-icon"><i class="fas fa-laptop"></i></div>
-                <h3>Tech Support & Development</h3>
+                <h3>Tech Support &amp; Development</h3>
                 <p>Leveraging my Computer Science background to provide technical support, troubleshooting, web development, and data analysis tailored to your business needs.</p>
                 <ul class="service-features">
                     <li><i class="fas fa-check"></i> Basic IT troubleshooting</li>
@@ -332,7 +332,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <a href="mailto:princeaaronva@gmail.com">princeaaronva@gmail.com</a>
+                            <a href="/cdn-cgi/l/email-protection#9fefedf6f1fcfafefeedf0f1e9fedff8f2fef6f3b1fcf0f2"><span class="__cf_email__" data-cfemail="97e7e5fef9f4f2f6f6e5f8f9e1f6d7f0faf6fefbb9f4f8fa">[email&#160;protected]</span></a>
                         </div>
                     </div>
                     
@@ -400,7 +400,7 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2026 Prince Aaron. All rights reserved.</p>
-            <p class="footer-tagline">Built with dedication and attention to detail</p>
+            <p class="footer-tagline">Virtual Assistant | Tech-Savvy Problem Solver</p>
         </div>
     </footer>
 

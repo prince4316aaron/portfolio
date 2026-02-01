@@ -778,6 +778,11 @@ header.scrolled {
     animation: fadeIn 0.5s ease;
 }
 
+/* Hidden class to properly hide service cards on all screen sizes */
+.experience-container.hidden {
+    display: none !important;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1436,19 +1441,15 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- 1024 px ---------- */
 @media (max-width: 1024px) {
-    .service-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Changed .service-cards-grid to .experience-container to match your HTML */
+    .experience-container { grid-template-columns: repeat(2, 1fr); }
     .skills-container   { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---------- 768 px  –  the main mobile breakpoint ---------- */
 @media (max-width: 768px) {
 
-    /* ── HEADER ──────────────────────────────────────────────
-       DOM order in <header>:  .logo  →  nav.navbar  →  button.hamburger
-       On mobile the nav leaves the flow (position:fixed), so the flex
-       row only contains logo + hamburger.  justify-content: space-between
-       puts logo LEFT, hamburger RIGHT – exactly where we want them.
-    ── */
+    /* ── HEADER ────────────────────────────────────────────── */
     header {
         flex-direction: row;            /* single row, never column */
         justify-content: space-between; /* logo ←→ hamburger */
@@ -1597,7 +1598,9 @@ body.menu-open { overflow: hidden; }
     .skill-item span { font-size: 0.78rem; }
 
     /* ── EXPERIENCE / SERVICE CARDS ──────────────────────── */
-    .service-cards-grid { grid-template-columns: 1fr; gap: 20px; }
+    /* Changed .service-cards-grid to .experience-container to match your HTML */
+    .experience-container { display: grid !important; grid-template-columns: 1fr; gap: 20px; }
+    
     .service-card       { padding: 28px 20px; }
     .service-card h3    { font-size: 1.35rem; margin-bottom: 12px; }
     .service-card > p   { font-size: 0.88rem; margin-bottom: 18px; }
@@ -1606,9 +1609,27 @@ body.menu-open { overflow: hidden; }
     .service-features li { font-size: 0.88rem; margin-bottom: 10px; }
     .learn-more-btn     { font-size: 0.9rem; padding: 10px 22px; }
 
-    /* detail view */
-    .detail-content  { padding: 26px 18px; }
-    .detail-header   { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 28px; }
+    /* Ensure detail view is visible on mobile */
+    .experience-detail-view {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        background: var(--bg-light);
+        min-height: 200px;
+        animation: none; /* Disable animation on mobile */
+    }
+    
+    /* When detail view is displayed, ensure it's fully visible */
+    #detailView[style*="display: block"] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    #detailView {
+        padding: 0 10px;
+        width: 100%;
+    }
+
     .detail-header h2 { font-size: 1.6rem; }
     .back-btn        { font-size: 0.9rem; padding: 10px 18px; margin-bottom: 28px; }
 
@@ -1618,6 +1639,7 @@ body.menu-open { overflow: hidden; }
     .timeline-item li { font-size: 0.85rem; padding-left: 18px; line-height: 1.7; }
 
     .tools-grid  { grid-template-columns: 1fr; gap: 14px; }
+    .tools-section h3 { font-size: 1.5rem; }
     .tool-card   { padding: 16px 14px; }
     .tool-card h5 { font-size: 1.05rem; }
     .tool-card p  { font-size: 0.85rem; }
@@ -1705,3 +1727,4 @@ body.menu-open { overflow: hidden; }
     .image-frame   { width: 140px; height: 140px; }
     .intro-sidebar { display: none; }
 }
+
